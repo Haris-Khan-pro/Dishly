@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import HeroSection from "./section/HeroSection";
-import About from "./section/About";
-import Stats from "./section/Stats";
-import Dishes from "./section/dishes";
+import HeroSection from "./sections/HeroSection";
+import About from "./sections/About";
+import Stats from "./sections/Stats";
+import Dishes from "./sections/dishes";
 
 const App = () => {
   return (

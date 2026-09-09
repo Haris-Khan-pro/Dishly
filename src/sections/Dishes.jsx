@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Animated from "../components/Animated";
 import { dishes } from "../data/data";
 import { motion } from "motion/react";
 
 const Dishes = () => {
-  const [rotate, setRotate] = useState({});
 
+  const [rotate, setRotate] = useState({})
   return (
     <section id="dishes" className="px-auto mt-44">
       <div className="text-center mb-16">
@@ -14,13 +14,13 @@ const Dishes = () => {
             Chef's Signature Selection
           </p>
         </Animated>
-
         <Animated>
           <h2 className="text-4xl md:text-5xl max-w-lg mx-auto text-balance">
-            Discover our signature dishes
+            Discover Our Exquisite Dishes
           </h2>
         </Animated>
       </div>
+
       <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-18 max-w-5xl mx-auto">
         {dishes.map((dish, index) => (
           <Animated
@@ -35,11 +35,10 @@ const Dishes = () => {
             >
               <img
                 src={dish.img}
-                alt={dish.title}
+                alt={dish.name}
                 className="size-30 md:size-35 object-cover"
               />
             </motion.div>
-            <h3>{dish.title}</h3>
           </Animated>
         ))}
       </div>
