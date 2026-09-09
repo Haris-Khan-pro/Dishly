@@ -28,7 +28,7 @@ const Dishes = () => {
             y={80}
             delay={index * 0.1}
             className="flex flex-col items-center text-center shrink-0 cursor-pointer"
-          >
+          onMouseEnter={() => setRotate((prev)=> ({...prev, [index]: (prev[index] || 0) + 180}))}>
             <motion.div
               animate={{ rotate: rotate[index] || 0 }}
               transition={{ type: "spring", stiffness: 80, damping: 15 }}
@@ -39,6 +39,8 @@ const Dishes = () => {
                 className="size-30 md:size-35 object-cover"
               />
             </motion.div>
+            <h3 className="mt-5">{dish.title}</h3>
+            <p className="mt-2 text-zinc-600">{dish.price}</p>
           </Animated>
         ))}
       </div>
