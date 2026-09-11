@@ -14,7 +14,7 @@ const TestimonialSection = () => {
         </Animated>
         <Animated delay={0.2}>
           <h2 className="text-4xl md:text-5xl max-w-lg mx-auto text-balance">
-            What our Guest say
+            What Our Guest Say
           </h2>
         </Animated>
       </div>
@@ -28,12 +28,20 @@ const TestimonialSection = () => {
             className="border border-slate-200 hover:bg-slate-50/50 rounded-2xl p-6 flex flex-col justify-between text-left"
           >
             <div>
-              <div>
+              <div className="flex gap-0.5 mb-4">
                 {[...Array(item.rating)].map((_, i)=>(
                   <StarIcon key={index} className="size-4 fill-orange-500 text-orange-500"/>
                 ))}
               </div>
               <p className="text-zinc-600 leading-relaxed mb-6">"{item.review}"</p>
+            </div>
+
+            <div className="flex items-center gap-3 mt-auto">
+              <img src={item.avatar} alt={item.name} className="size-11 rounded-full object-cover shrink-0"/>
+              <div>
+                <p className="font-medium leading-tight mb-0.5">{item.name}</p>
+                <p className="text-zinc-600">{item.location}</p>
+              </div>
             </div>
           </Animated>
         ))}
